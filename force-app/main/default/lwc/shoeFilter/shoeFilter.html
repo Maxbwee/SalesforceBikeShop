@@ -1,0 +1,23 @@
+<template>
+    <lightning-card title="Filters">
+        <div class="slds-var-m-horizontal_medium">
+        <lightning-input
+        label="Search Key"
+        type="search"
+        onchange={handleSearchKeyChange}
+        >
+        </lightning-input>
+        <section>
+            <lightning-slider
+                label="Max Price"
+                step="100"
+                min="0"
+                max="2000"
+                value={maxPrice}
+                onchange={handleMaxPriceChange}
+            >
+            </lightning-slider>
+        </section>
+        </div>
+    </lightning-card>
+</template>

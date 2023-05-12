@@ -1,0 +1,20 @@
+<template>
+    <lightning-card title="Shoe Item">
+        <!--Contains the filtered shoe data. Loops through the item to show shoes-->
+        <template for:each={filteredShoes.data} for:item="shoe">
+            <div key={shoe.Id} title="Shoe Item">
+                <p>Name: {shoe.Name} </p>
+                <img style="max-height: 150px"  alt="Shoe Image" src={shoe.Image_Url__c}/>
+        <p>Price: {shoe.Price__c} €</p>
+        <lightning-button
+        data-name={shoe.Name}
+        data-price={shoe.Price__c}
+        data-picture={shoe.Image_Url__c}
+        label="Add to cart"
+        onclick={handleAddToCart}
+        >
+    </lightning-button>
+</div>
+</template>
+</lightning-card>
+</template>

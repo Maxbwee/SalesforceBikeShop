@@ -1,0 +1,26 @@
+<template>
+  
+  <lightning-card title="Shopping Cart"> 
+    <p>Shoes in the cart </p>
+    <template for:each={shoeName} for:item="shoe">
+      <div key={shoeNames}>
+        <p>Shoe name: <lightning-formatted-text value={shoe}></lightning-formatted-text></p>
+      
+      </div>
+    </template>
+      <br/>
+      <br/>
+      <p> Latest shoe added: {latestShoe}  </p>
+      <p> Price: {shoePrice} €</p>
+
+        <img style="max-height: 150px"  src={shoePicture}/>
+    <p class="slds-text-align_center slds-var-m-vertical_medium">
+      Total price: €<lightning-formatted-number value={counter}></lightning-formatted-number>
+    </p>
+    <lightning-button
+    label="Clear Cart"
+    onclick={handleDeleteFromCart}
+    ></lightning-button>
+    </lightning-card>
+    
+</template> 
